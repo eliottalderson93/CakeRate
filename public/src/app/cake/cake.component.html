@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="content">
+    <p class="title">Baked by {{cakeToShow.data.baker}}</p>
+    <div class="columns">
+      <div class="column">
+        <figure class="image is-4by3">
+          <img src="{{cakeToShow.data.imgUrl}}" alt="WRONG">
+        </figure>
+      </div>
+      <div class="column">
+          <p>Average Rating: {{avgRating}}</p>
+        <div class="content" *ngFor = "let rating of cakeToShow.data.ratings">
+          <p>Rating</p>
+          <p>{{rating.score}}</p>
+          <p>{{rating.comment}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
